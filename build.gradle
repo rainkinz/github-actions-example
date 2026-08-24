@@ -8,7 +8,9 @@ group = 'com.example'
 version = '1.0-SNAPSHOT'
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }
 
 repositories {
@@ -17,6 +19,6 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation group: 'net.logstash.logback', name: 'logstash-logback-encoder', version: '7.4'
+    implementation group: 'net.logstash.logback', name: 'logstash-logback-encoder', version: '9.0'
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
 }
